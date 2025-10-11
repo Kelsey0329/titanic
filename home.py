@@ -1,8 +1,4 @@
 import streamlit as st
-if page == "Data Analysis":
-    show_data_analysis()
-elif page == "Prediction":
-    show_prediction()
 
 # Set page configuration
 st.set_page_config(
