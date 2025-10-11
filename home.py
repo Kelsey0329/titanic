@@ -29,14 +29,21 @@ Use this app to:
 ---
 """)
 
-# Navigation button
+# Navigation buttons
 st.subheader("Get Started")
 
-col1, col2, col3 = st.columns([1, 2, 1])
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    if st.button("📊 Data Analysis", use_container_width=True):
+        st.switch_page("pages/app.py")
 
 with col2:
-    if st.button("🚀 Go to Main App", type="primary", use_container_width=True):
-        st.switch_page("pages/app.py")
+    if st.button("🔮 Survival Prediction", type="primary", use_container_width=True):
+        st.switch_page("pages/prediction.py")
+
+with col3:
+    st.empty()  # Placeholder for future features
 
 st.markdown("---")
 st.markdown("*Built with Streamlit and powered by machine learning*")
